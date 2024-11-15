@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+    <link rel="icon" href="images/icon.jpg" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center p-5">Bookmarker</h1>
+      <div class="separator"></div>
+      <h2 class="text-center py-3">Bookmark your favorite sites</h2>
+
+      <p>site name</p>
+      <input
+        id="bookmarkName"
+        type="text"
+        placeholder="Bookmark Name"
+        class="form-control"
+      />
+      <p class="mt-3">site URL</p>
+      <input
+        id="websiteName"
+        type="text"
+        placeholder="Website Name"
+        class="form-control"
+      />
+      <div class="text-center py-4">
+        <button
+          id="submitBtn"
+          class="btn btn-danger"
+          
+          onclick="addBookmark()"
+        >
+          Submit
+        </button>
+      </div>
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                Invalid URL
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">url must start with https://</div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Okay
+              </button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="separator mb-3"></div>
+
+      <table class="table py-5">
+        <thead>
+          <tr>
+            <td>Index</td>
+            <td>Website Name</td>
+            <td class="d-none">Website URL</td>
+            <td>Visit</td>
+            <td>Delete</td>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+
+    <script src="javascript/bootstrap.bundle.min.js"></script>
+    <script src="javascript/javascirpt.js"></script>
+  </body>
+</html>
